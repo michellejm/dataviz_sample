@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0416.1335                               -->
+<workbook source-build='2018.1.0 (20181.18.0416.1335)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='mass_shootings' inline='true' name='federated.11afz7404r6nuc17ar9ja1bf4hsu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mass_shootings' name='textscan.1kjr8xd0o38f4e0zzvgz70ea5oz9'>
+            <connection class='textscan' directory='/Users/mam/Workshops/dataviz_sample/data' filename='mass_shootings.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1kjr8xd0o38f4e0zzvgz70ea5oz9' name='mass_shootings.csv' table='[mass_shootings#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Incident Date' ordinal='0' />
+            <column datatype='string' name='State' ordinal='1' />
+            <column datatype='string' name='City Or County' ordinal='2' />
+            <column datatype='string' name='Address' ordinal='3' />
+            <column datatype='integer' name='# Killed' ordinal='4' />
+            <column datatype='integer' name='# Injured' ordinal='5' />
+            <column datatype='string' name='Operations' ordinal='6' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Incident Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Incident Date]</local-name>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias>Incident Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City Or County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City Or County]</local-name>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias>City Or County</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Address]</local-name>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias>Address</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># Killed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[# Killed]</local-name>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias># Killed</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># Injured</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[# Injured]</local-name>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias># Injured</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Operations</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Operations]</local-name>
+            <parent-name>[mass_shootings.csv]</parent-name>
+            <remote-alias>Operations</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[# Injured]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[# Killed]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Address]' role='dimension' type='nominal' />
+      <column datatype='string' name='[City Or County]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='date' name='[Incident Date]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[Incident Date]' derivation='None' name='[none:Incident Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Incident Date]' derivation='None' name='[none:Incident Date:qk]' pivot='key' type='quantitative' />
+      <drill-paths>
+        <drill-path name='State, City Or County'>
+          <field>[State]</field>
+          <field>[City Or County]</field>
+        </drill-path>
+      </drill-paths>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/mam/Documents/My Tableau Repository/Datasources/mass_shootings.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/19/2018 03:34:35 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='500' timestamp-start='2018-05-19 03:34:35.978' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Incident Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Incident Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Incident Date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mass_shootings.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>443</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mass_shootings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City Or County</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City Or County]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City Or County</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mass_shootings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>342</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Address</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Address]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Address</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mass_shootings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>500</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name># Killed</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[# Killed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias># Killed</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mass_shootings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name># Injured</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[# Injured]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias># Injured</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mass_shootings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Operations</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Operations]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Operations</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mass_shootings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+        <filter class='quantitative' column='[# Injured]' included-values='in-range'>
+          <min>0</min>
+          <max>441</max>
+        </filter>
+        <filter class='quantitative' column='[# Killed]' included-values='in-range'>
+          <min>0</min>
+          <max>59</max>
+        </filter>
+        <filter class='categorical' column='[Address]'>
+          <groupfilter from='&quot;1 block of East 37th Street&quot;' function='range' level='[Address]' to='&quot;Wilkinson Avenue&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        </filter>
+        <filter class='categorical' column='[City Or County]'>
+          <groupfilter from='&quot;Alachua&quot;' function='range' level='[City Or County]' to='&quot;Youngstown&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        </filter>
+        <filter class='categorical' column='[State]'>
+          <groupfilter from='&quot;Alabama&quot;' function='range' level='[State]' to='&quot;Wisconsin&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        </filter>
+        <filter class='categorical' column='[none:Incident Date:ok]'>
+          <groupfilter from='#2016-11-09#' function='range' level='[none:Incident Date:ok]' to='#2018-05-18#' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        </filter>
+        <filter class='quantitative' column='[none:Incident Date:qk]' included-values='in-range'>
+          <min>#2016-11-09#</min>
+          <max>#2018-05-18#</max>
+        </filter>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.519328' measure-ordering='alphabetic' measure-percentage='0.480672' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>People Killed in Mass Shootings Since 2016</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mass_shootings' name='federated.11afz7404r6nuc17ar9ja1bf4hsu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11afz7404r6nuc17ar9ja1bf4hsu'>
+            <column datatype='integer' name='[# Killed]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Incident Date]' role='dimension' type='ordinal' />
+            <column-instance column='[# Killed]' derivation='Sum' name='[sum:# Killed:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Incident Date]' derivation='Day-Trunc' name='[tdy:Incident Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.11afz7404r6nuc17ar9ja1bf4hsu].[tdy:Incident Date:qk]' scope='cols' value='Date' />
+            <format attr='title' class='0' field='[federated.11afz7404r6nuc17ar9ja1bf4hsu].[sum:# Killed:qk]' scope='rows' value='Number of People Killed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[sum:# Killed:qk]</rows>
+        <cols>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[tdy:Incident Date:qk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Las Vegas, NV: 59 people killed</run>
+              <run>Æ&#10;</run>
+              <run bold='true'>Lawrence, KS: 3 people killed</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2017-10-03 06:43:49.739#'>
+                  <node-reference>
+                    <axis>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[tdy:Incident Date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='61.834932821497119'>
+                  <node-reference>
+                    <axis>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[sum:# Killed:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Sutherland Springs, TX: 27 people killed</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2017-11-04 01:17:17.174#'>
+                  <node-reference>
+                    <axis>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[tdy:Incident Date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='26.633397312859888'>
+                  <node-reference>
+                    <axis>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[sum:# Killed:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Parkland, FL: 17 people killed</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2018-02-14 17:58:59.776#'>
+                  <node-reference>
+                    <axis>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[tdy:Incident Date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='17.497120921305182'>
+                  <node-reference>
+                    <axis>[federated.11afz7404r6nuc17ar9ja1bf4hsu].[sum:# Killed:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='3' param='horz' type='layout-flow' w='98400' x='800' y='1000' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='3' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='' id='3' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints />
+      <active id='3' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
