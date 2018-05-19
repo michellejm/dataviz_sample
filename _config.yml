@@ -1,5 +1,4 @@
 theme: jekyll-theme-cayman
-title: My Data Viz Site
+title: [My Data Viz Site!](./index.html)
 description: An example site for Introduction to Data Visualization taught Summer 2018 at the CUNY-GC
 logo: /img/logo.png
-github: ./index.html
