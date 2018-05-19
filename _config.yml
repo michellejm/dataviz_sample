@@ -2,3 +2,6 @@ theme: jekyll-theme-cayman
 title: A Data Viz Site
 description: An example site for Introduction to Data Visualization taught Summer 2018 at the CUNY-GC
 logo: /img/logo.png
+github:
+  zip_url: https://michellejm.github.io/dataviz_sample
+  another_url: ./index.md
